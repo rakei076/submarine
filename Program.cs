@@ -9,12 +9,15 @@ public class Program
 
     public static void Main()
     {
-        Board board=new Board(ROW_SIZE,COLUMN_SIZE);
-        board.Print();
-        board.Input();
-        board.PlaceSymbol();
+        while(true)
+        {
+            board.Input();
+            board.Print();
+            
+        }
         
-        Console.WriteLine("\n更新后的棋盘:");
-        board.Print();
+        
+     
     }
 }
+//dotnet run

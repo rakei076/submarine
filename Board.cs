@@ -7,8 +7,18 @@ public class Board
     public int ROW_SIZE{get;set;}
     public int COLUMN_SIZE{get;set;}
     private int[,] cells;
+    
     private int inputRow;
     private int inputCol;
+
+    private int submarineRow;
+    private int submarineCol;
+
+    enum CellState{
+        Unselected,
+        Selected,
+        Surk,
+    }
 
     public Board(int rowSize,int columnSize)
     {
@@ -27,7 +37,7 @@ public class Board
     
     public void Print()
     {
-        Console.Write("   ");
+        Console.Write(" ");
         for(int col=0;col<COLUMN_SIZE;col++)
         {
             Console.Write($"{(char)('A' + col)} ");
@@ -40,15 +50,31 @@ public class Board
             Console.Write(i+1);
             for(int j=0;j<COLUMN_SIZE;j++)
             {
-                if(cells[i,j] == 1){
-                    Console.Write(" "+'*');
+                if(cells[i,j] == CellState.Surk){
+                    flag=true;
+                    Console.Write("X"+"|");
+                }else if(cells[i,j] == CellState.Selected){
+                    Console.Write("*"+"|");
+                }else{
+                    Console.Write(" "+"|");
                 }
-                Console.Write(" "+"|");
+                Console.Write("*"+"|");
+                }else{
+                    Console.Write(" "+"|");
+                }
             }
-            Console.Write(" "+"|");
+            
             Console.WriteLine();
+
         }
         Console.WriteLine();
+        if(flag==true){
+            Console.WriteLine($"潜水艦の位置は,{submarineRow + 1} {(char)('A'+ submar ineCol)}");
+            Console.WriteLine("潜水艦を撃沈しました！");
+        }else{
+            int dist=Math.Abs(inputRow-submarineRow)+Math.Abs(inputCol-submarineCol);
+            Console.WriteLine($"入力した位置から潜水艦までの距離は{dist}");
+        }
     }
     public void Input()
     {
@@ -59,8 +85,13 @@ public class Board
         char[] ch = Console.ReadLine().ToCharArray();
         inputCol = ch[0] - 'A';
         
+        Console.WriteLine($"入力した位置{strRow}{serCol}");
         
-        cells[inputRow-1,inputCol]=1
+        if (inputRow==submarineRow && inputCol==submarineCol){
+            cells[inputRow-1,inputCol]=CellState.Surk;
+        }else{
+            cells[inputRow-1,inputCol]=CellState.Selected;
+        }
     }
 
 }
