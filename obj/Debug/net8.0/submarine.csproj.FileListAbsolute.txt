@@ -1,0 +1,15 @@
+/Users/rakel/Documents/GitHub/submarine/bin/Debug/net8.0/submarine
+/Users/rakel/Documents/GitHub/submarine/bin/Debug/net8.0/submarine.deps.json
+/Users/rakel/Documents/GitHub/submarine/bin/Debug/net8.0/submarine.runtimeconfig.json
+/Users/rakel/Documents/GitHub/submarine/bin/Debug/net8.0/submarine.dll
+/Users/rakel/Documents/GitHub/submarine/bin/Debug/net8.0/submarine.pdb
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.AssemblyInfoInputs.cache
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.AssemblyInfo.cs
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.csproj.CoreCompileInputs.cache
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.sourcelink.json
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.dll
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/refint/submarine.dll
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.pdb
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/submarine.genruntimeconfig.cache
+/Users/rakel/Documents/GitHub/submarine/obj/Debug/net8.0/ref/submarine.dll
