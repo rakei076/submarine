@@ -58,18 +58,18 @@ internal class Board
                 if (cells[row, col] == CellState.Sunk)
                 {
                     isFinished = true;
-                    Console.Write(" X");
+                    Console.Write("|X");
                 }
                 else if (cells[row, col] == CellState.Selected)
                 {
-                    Console.Write(" *");
+                    Console.Write("|*");
                 }
                 else
                 {
-                    Console.Write("  ");
+                    Console.Write("| ");
                 }
             }
-            Console.WriteLine();
+            Console.WriteLine("|");
         }
 
         if (isFinished == true)
